@@ -6,10 +6,13 @@ import './index.scss'
 import CustomInput from '../basic/customInput'
 import CustomButton from '../basic/customButton'
 import WhiteSpace from '../basic/whiteSpace'
+import CustomRadio from '../basic/customRadio'
 
 class Form extends React.Component{
     setComponent = type => {
         switch(type){
+            case "radioButton":
+                return CustomRadio
             default:
                 return CustomInput
         }
@@ -24,7 +27,7 @@ class Form extends React.Component{
                             <Field 
                             name={element.title}
                             placeholder={element.placeholder}
-                            component={this.setComponent(element.type)}
+                            component={this.setComponent(element.inputType)}
                             label={element.label}
                             key={index}
                             content={element.content}

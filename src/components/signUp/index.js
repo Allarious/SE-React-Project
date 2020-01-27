@@ -22,6 +22,20 @@ const FORM_VALUES = [
         title: "repeatPassword",
         placeholder: "تکرار پسورد",
         type: "password"
+    },
+    {
+        title: "userType",
+        inputType: "radioButton",
+        label: "ثبت‌نام به عنوان:",
+        content: [
+            {
+                title: "buyer",
+                label: "خریدار"
+            },{
+                title: "seller",
+                label: "فروشنده"
+            }
+        ]
     }
 ]
 
