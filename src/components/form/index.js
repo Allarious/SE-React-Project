@@ -23,6 +23,7 @@ class Form extends React.Component{
                         return(
                             <Field 
                             name={element.title}
+                            placeholder={element.placeholder}
                             component={this.setComponent(element.type)}
                             label={element.label}
                             key={index}

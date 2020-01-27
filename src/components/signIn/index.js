@@ -11,11 +11,11 @@ import history from '../../history'
 const FORM_VALUES = [
     {
         title: "username",
-        label: "نام کاربری"
+        placeholder: "نام کاربری"
     },
     {
         title: "password",
-        label: "پسورد",
+        placeholder: "پسورد",
         type: "password"
     }
 ]
