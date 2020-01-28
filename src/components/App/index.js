@@ -11,6 +11,7 @@ import SignUp from '../signUp'
 import MainPage from '../mainPage'
 import Cart from '../cart'
 import Products from '../products'
+import AddProduct from '../addProduct'
 import Navbar from '../navbar'
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
             <Route path="/auth/SignUp" exact component={SignUp} />
             <Route path="/cart" exact component={Cart} />
             <Route path="/productList" exact component={Products} />
+            <Route path="/addProduct" exact component={AddProduct} />
         </Router>
     </div>)
 }

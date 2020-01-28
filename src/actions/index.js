@@ -1,4 +1,4 @@
-import { FETCH_PRODUCTS, FETCH_PRODUCT, ADD_TO_CART, FETCH_CART, UPDATE_CART, DELETE_CART_ITEM } from "./types"
+import { FETCH_PRODUCTS, FETCH_PRODUCT, ADD_TO_CART, FETCH_CART, UPDATE_CART, DELETE_CART_ITEM, ADD_PRODUCT } from "./types"
 
 import server from '../apis/server'
 
@@ -30,5 +30,17 @@ export const changeQuantity = (cartData) => async dispatch => {
     }else{
         const response = await server.patch(`/cart/${cartData.id}`, cartData)
         dispatch({ type: UPDATE_CART, payload: response.data })
+    }
+}
+
+export const addProduct = (product) => async dispatch => {
+    try{
+        console.log(product)
+        const response = await server.post('/products/', product)
+        console.log(response.data)
+        dispatch({ type: ADD_PRODUCT, payload: response.data })
+        alert('محصول با موفقیت اضافه شد')
+    }catch{
+        alert('خطایی رخ داد')
     }
 }

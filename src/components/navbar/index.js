@@ -15,6 +15,9 @@ const NAVBAR_ITEMS = [
         text: "صفحه محصولات",
         link: "/productList"
     },{
+        text: "اضافه کردن محصول",
+        link: "/addProduct"
+    },{
         text: "ورود",
         link: "/auth/SignIn"
     },{

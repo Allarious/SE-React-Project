@@ -7,10 +7,13 @@ import CustomInput from '../basic/customInput'
 import CustomButton from '../basic/customButton'
 import WhiteSpace from '../basic/whiteSpace'
 import CustomRadio from '../basic/customRadio'
+import CustomTextArea from '../basic/customTextArea'
 
 class Form extends React.Component{
     setComponent = type => {
         switch(type){
+            case "textarea":
+                return CustomTextArea
             case "radioButton":
                 return CustomRadio
             default:
@@ -57,6 +60,15 @@ const validate = formValues => {
     }
     if(!formValues.repeatPassword){
         errors.repeatPassword = "لطفا تکرار پسورد خود را وارد نمایید"
+    }
+    if(!formValues.productName){
+        errors.productName = "لطفا نام محصول را وارد نمایید"
+    }
+    if(!formValues.price){
+        errors.price = "لطفا قیمت محصول خود را وارد نمایید"
+    }
+    if(!formValues.productionTime){
+        errors.productionTime = "لطفا تاریخ تولید محصول خود را وارد نمایید"
     }
     return errors
 }
