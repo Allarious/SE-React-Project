@@ -45,23 +45,18 @@
   ],
   "cart": [
     {
-      "productId": 6,
-      "amount": 1,
-      "id": 1
-    },
-    {
       "productId": 1,
       "amount": 1,
       "id": 2
     },
     {
       "productId": 5,
-      "amount": 1,
+      "amount": 3,
       "id": 3
     },
     {
       "productId": 6,
-      "amount": 1,
+      "amount": 6,
       "id": 4
     }
   ]

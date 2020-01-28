@@ -1,4 +1,4 @@
-import { FETCH_PRODUCTS, FETCH_PRODUCT, ADD_TO_CART, FETCH_CART } from "./types"
+import { FETCH_PRODUCTS, FETCH_PRODUCT, ADD_TO_CART, FETCH_CART, UPDATE_CART, DELETE_CART_ITEM } from "./types"
 
 import server from '../apis/server'
 
@@ -21,4 +21,14 @@ export const addToCart = (productId, amount) => async dispatch => {
 export const fetchCart = () => async dispatch => {
     const response = await server.get('/cart/')
     dispatch({ type: FETCH_CART, payload: response.data })
+}
+
+export const changeQuantity = (cartData) => async dispatch => {
+    if(cartData.amount == 0){
+        await server.delete(`/cart/${cartData.id}`)
+        dispatch({ type: DELETE_CART_ITEM, payload: cartData.id })
+    }else{
+        const response = await server.patch(`/cart/${cartData.id}`, cartData)
+        dispatch({ type: UPDATE_CART, payload: response.data })
+    }
 }
