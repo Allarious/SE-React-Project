@@ -12,6 +12,9 @@ const NAVBAR_ITEMS = [
         text: "سبد خرید",
         link: "/cart"
     },{
+        text: "صفحه محصولات",
+        link: "/productList"
+    },{
         text: "ورود",
         link: "/auth/SignIn"
     },{

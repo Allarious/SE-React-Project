@@ -10,6 +10,7 @@ import SignIn from '../signIn'
 import SignUp from '../signUp'
 import MainPage from '../mainPage'
 import Cart from '../cart'
+import Products from '../products'
 import Navbar from '../navbar'
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
             <Route path="/auth/SignIn" exact component={SignIn} />
             <Route path="/auth/SignUp" exact component={SignUp} />
             <Route path="/cart" exact component={Cart} />
+            <Route path="/productList" exact component={Products} />
         </Router>
     </div>)
 }
