@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-
+import lemonslice from './images/lemon-slice.svg'
 import './index.scss'
 
 import history from '../../history'
@@ -25,11 +25,11 @@ const NAVBAR_ITEMS = [
     },{
         text: "ورود",
         link: "/auth/SignIn",
-        class: "ml-md-2 mr-md-auto ml-sm-5 mr-sm-5 mt-1 mb-2 btn btn-success",
+        class: "ml-md-2 mr-md-auto ml-sm-5 mr-sm-5 mb-2 btn btn-success",
     },{
         text: "ثبت‌نام",
         link: "/auth/SignUp",
-        class: "ml-md-3 mr-md-2 ml-sm-5 mr-sm-5 mt-1 mb-2 btn btn-success",
+        class: "ml-md-3 mr-md-2 ml-sm-5 mr-sm-5 mb-2 btn btn-success",
     }
 ]
 
@@ -66,6 +66,10 @@ class Navbar extends React.Component {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <a class="navbar-brand text-center d-block" href="/">
+                    <img src={lemonslice} width="50" height="auto" class="d-inline-block align-top ml-2" alt=""></img>
+                    لیمومارکت
+                </a>
 
                 <ul className="navbar-nav w-75 mt-2 mt-lg-0 ml-auto mr-auto">
                     {NAVBAR_ITEMS.map((element, index) => {
