@@ -4,12 +4,7 @@ pipeline {
     registryCredential = 'lemonmarket'
     dockerImage = ''
   }
-  agent {
-      docker {
-            image 'node:6-alpine' 
-            args '-p 3000:3000' 
-        }
-  }
+  agent any
   stages {
     stage('Cloning Git') {
       steps {
@@ -17,6 +12,12 @@ pipeline {
       }
     }
     stage('Build') {
+      agent {
+          docker {
+                image 'node:6-alpine' 
+                args '-p 3000:3000' 
+            }
+      }
        steps {
          parallel(
             a: {
