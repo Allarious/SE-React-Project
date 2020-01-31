@@ -12,8 +12,10 @@ pipeline {
   }
   stages {
     stage('Initialize'){
+      steps {
         def dockerHome = tool 'LemonMarketDocker'
         env.PATH = "${dockerHome}/bin:${env.PATH}"
+      }
     }
     stage('Cloning Git') {
       steps {
