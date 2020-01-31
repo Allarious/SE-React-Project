@@ -5,7 +5,6 @@ pipeline {
     dockerImage = ''
   }
   agent any
-  tools {nodejs "node" }
   stages {
     stage('Cloning Git') {
       steps {
@@ -18,7 +17,7 @@ pipeline {
             a: {
               sh 'npm install'
             },
-            b:  {
+            b: {
               sh '''cd mock-server
               npm install'''
             }
