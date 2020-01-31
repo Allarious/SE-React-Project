@@ -6,11 +6,6 @@ pipeline {
   }
   agent any
   stages {
-    stage('Initialize'){
-      steps {
-        sh 'apt-get install docker'
-      }
-    }
     stage('Cloning Git') {
       steps {
         git 'https://github.com/Allarious/SE-React-Project.git'
