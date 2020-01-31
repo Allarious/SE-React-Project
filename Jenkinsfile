@@ -14,11 +14,15 @@ pipeline {
     }
     stage('Build') {
        steps {
-         sh 'npm install'
-       }
-       steps {
-         sh '''cd mock-server
-         npm install'''
+         parallel(
+            a: {
+              sh 'npm install'
+            },
+            b:  {
+              sh '''cd mock-server
+              npm install'''
+            }
+         )
        }
     }
     stage('Test') {
