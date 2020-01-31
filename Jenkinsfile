@@ -11,6 +11,10 @@ pipeline {
       }
   }
   stages {
+    stage('Initialize'){
+        def dockerHome = tool 'LemonMarketDocker'
+        env.PATH = "${dockerHome}/bin:${env.PATH}"
+    }
     stage('Cloning Git') {
       steps {
         git 'https://github.com/Allarious/SE-React-Project.git'
