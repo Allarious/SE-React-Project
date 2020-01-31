@@ -347,3 +347,23 @@
   [hidden] {
     display: none;
   }
+
+/**
+  * Add new font for all browser.
+  */
+
+@import '../../node_modules/vazir-font/dist/Farsi-Digits/font-face-FD.css';
+@import '../../node_modules/vazir-font/dist/Farsi-Digits-Without-Latin/font-face-FD-WOL.css';
+@import '../../node_modules/vazir-font/dist/font-face.css';
+
+* {
+  font-family: 'Vazir FD', 'Vazir';
+}
+
+.bg-light-green {
+  background-image: linear-gradient(to right, #7BB742 , #438008);
+}
+
+html, body {
+  background-color: #F4F6F6;
+}

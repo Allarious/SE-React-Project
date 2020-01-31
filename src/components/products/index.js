@@ -12,7 +12,7 @@ class Products extends React.Component{
     }
     render(){
         return(
-            <div className="products__container">
+            <div className="products__container row m-3 p-3">
                 {this.props.products ? Object.values(this.props.products).map((element, index) => {
                     return(
                         <Product key={index} name={element.name} price={element.price} seller={element.seller} productId={element.id}/>

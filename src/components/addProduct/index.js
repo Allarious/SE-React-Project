@@ -32,8 +32,8 @@ class AddProduct extends React.Component{
     }
     render(){
         return(
-            <div className="add-product__container">
-                <Form onSubmit={this.onSubmit} formValues={FORM_VALUES} submitText={"اضافه کردن محصول"}/>
+            <div className="add-product__container m-3 mt-5 p-3 col-md-4 ml-auto mr-auto">
+                <Form onSubmit={this.onSubmit} formValues={FORM_VALUES} submitText={"اضافه‌کردن محصول"}/>
             </div>)
     }
 }

@@ -15,7 +15,7 @@ import AddProduct from '../addProduct'
 import Navbar from '../navbar'
 
 const App = () => {
-    return(<div className="App__container">
+    return(<div className="App__container container-fuild">
         <Router history={history}>
             <Navbar/>
             <Route path="/" exact component={MainPage} />

@@ -45,9 +45,9 @@ class SignUp extends React.Component{
     }
     render(){
         return(
-        <div className="sign-up__container">
+        <div className="sign-up__container m-3 mt-5 p-3 col-md-4 ml-auto mr-auto card">
             <div className="sign-up__image"></div>
-            <Form onSubmit={this.onSubmit} formValues={FORM_VALUES} submitText={"ثبت‌نام"}/>
+            <Form onSubmit={this.onSubmit} formValues={FORM_VALUES} submitText={"ثبت‌نام"} title={"ثبت‌نام"}/>
             <CustomButton text="وارد شوید" onClick={() => {history.push('/auth/SignIn')}} />
         </div>)
     }

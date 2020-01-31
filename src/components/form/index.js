@@ -23,7 +23,7 @@ class Form extends React.Component{
     render(){
         return(
             <form className="form__container" onSubmit={this.props.handleSubmit(this.props.onSubmit)}>
-                {this.props.title ? <div className="form__title">{this.props.title}</div> : null}
+                {this.props.title ? <h3 className="form__title text-center m-5">{this.props.title}</h3> : null}
                 <div className="form__input-container">
                     {this.props.formValues.map((element, index) => {
                         return(
